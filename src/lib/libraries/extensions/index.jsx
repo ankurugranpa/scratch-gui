@@ -49,6 +49,9 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 import newBlockImage from './newblocks/newblocks.png';
 import newBlockButtonImage from './newblocks/newblocks-small.png';
 
+import chatgptBlockImage from './chatgpt/chatgpt.png';
+import chatgptBlockButtonImage from './chatgpt/chatgpt-small.png';
+
 export default [
     {
         name: (
@@ -332,6 +335,26 @@ export default [
                 defaultMessage="New blocks."
                 description="my block"
                 id="gui.extension.newblocks.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://scratch.mit.edu/wedo'
+
+    },
+	{
+        name: 'ChatGpt',
+        extensionId: 'chatgpt',
+        collaborator: 'Me',
+        iconURL: chatgptBlockImage,
+        insetIconURL: chatgptBlockButtonImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="conect chatgpt"
+                description="use chatgpt"
+                id="gui.extension.chatgpt.description"
             />
         ),
         featured: true,
