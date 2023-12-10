@@ -52,6 +52,9 @@ import newBlockButtonImage from './newblocks/newblocks-small.png';
 import chatgptBlockImage from './chatgpt/chatgpt.png';
 import chatgptBlockButtonImage from './chatgpt/chatgpt-small.png';
 
+import lineBlockImage from './line/line.png';
+import lineBlockButtonImage from './line/line-small.png';
+
 export default [
     {
         name: (
@@ -341,7 +344,6 @@ export default [
         disabled: false,
         internetConnectionRequired: true,
         bluetoothRequired: false,
-        helpLink: 'https://scratch.mit.edu/wedo'
 
     },
 	{
@@ -361,7 +363,24 @@ export default [
         disabled: false,
         internetConnectionRequired: true,
         bluetoothRequired: false,
-        helpLink: 'https://scratch.mit.edu/wedo'
 
+    },
+	{
+        name: 'Line',
+        extensionId: 'line',
+        collaborator: 'Me',
+        iconURL: lineBlockImage,
+        insetIconURL: lineBlockButtonImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="conect to line message api"
+                description="use line"
+                id="gui.extension.line.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
     }
 ];
