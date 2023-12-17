@@ -55,6 +55,9 @@ import chatgptBlockButtonImage from './chatgpt/chatgpt-small.png';
 import lineBlockImage from './line/line.png';
 import lineBlockButtonImage from './line/line-small.png';
 
+import soundIconURL from './voicevox/music.png';
+import soundInsetIconURL from './voicevox/music-small.svg';
+
 export default [
     {
         name: (
@@ -382,5 +385,25 @@ export default [
         disabled: false,
         internetConnectionRequired: true,
         bluetoothRequired: false,
-    }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Voicevox"
+                description="Name for the 'Music' extension"
+                id="gui.extension.voicevox.name"
+            />
+        ),
+        extensionId: 'voicevox',
+        iconURL: soundIconURL,
+        insetIconURL: soundInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Play instruments and drums."
+                description="Description for the 'Music' extension"
+                id="gui.extension.voicevox.description"
+            />
+        ),
+        featured: true
+    },
 ];
